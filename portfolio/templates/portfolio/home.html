@@ -5,7 +5,11 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to my HomePage</h1>
+    <h1>Julio's  Portfolio</h1>
+    {% load static %}
+    <a href="{% static "portfolio/resume.pdf"%}">Resume</a>
+    <img src="{% static "portfolio/me.jpg" %}" alt="me">
+
     {% for project in projects %}
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
