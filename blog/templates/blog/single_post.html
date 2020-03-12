@@ -6,6 +6,10 @@
 </head>
 <body>
     <h1>This is a clicked single post</h1>
+    <h1>{{ post.title }}</h1>
+    <h6>{{ post.date_created|date:"P d M, Y" }}</h6>
+    <p>{{ post.post_body|safe }}</p>
+    <a href="{% url "blog:all_blogs" %}">Go back</a>
 
 </body>
 </html>

@@ -8,5 +8,10 @@ class Post(models.Model):
   post_body = models.TextField()
   url = models.URLField(blank=True)
 
+  def __str__(self):
+    """Show database item default name in admin section"""
+
+    return self.title
+
 
 
