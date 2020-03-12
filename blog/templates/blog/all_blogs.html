@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <h1>Hello bloggers</h1>
     {% for post in posts %}
-        <h2>{{ blog.title }}</h2>
-        <p>{{ blog.date_created }}</p>
-        <p>{{ blog.post_body }}</p>
-        {% if blog.url %}
-            <br><a href="{{ blog.url }}">Read More</a>
+        <h2>{{ post.title }}</h2>
+        <h7>{{ post.date_created }}</h7>
+        <p>{{ post.post_body }}</p>
+        {% if post.url %}
+            <a href="{{ post.url }}">Read More</a><br><br>
         {% endif %}
 
     {% endfor %}
